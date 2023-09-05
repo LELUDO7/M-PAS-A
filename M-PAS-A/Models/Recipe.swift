@@ -46,7 +46,7 @@ extension Recipe {
     }
     
     static var emptyRecipe : Recipe {
-        Recipe(name: "", ingredients: [], timeMinInt: 0, origin: Origin(name: "Quebec"))
+        Recipe(name: "", ingredients: [], timeMinInt: 5, origin: Origin(name: "Quebec"))
     }
     
     static let sampleData: [Recipe] =

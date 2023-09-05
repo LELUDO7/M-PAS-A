@@ -15,6 +15,19 @@ struct NewRecipeView: View {
     var body: some View {
         NavigationStack{
             RecipeEditView(recipe: $newRecipe )
+                .toolbar {
+                    ToolbarItem(placement: .cancellationAction) {
+                        Button("Dismiss") {
+                            isPresentingNewRecipeView = false
+                        }
+                    }
+                    ToolbarItem(placement: .confirmationAction) {
+                        Button("Add") {
+                            recipes.append(newRecipe)
+                            isPresentingNewRecipeView = false
+                        }
+                    }
+                }
         }
     }
 }
